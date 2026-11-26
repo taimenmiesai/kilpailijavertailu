@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kilpailijavertailu</title>
+<meta name="description" content="Kuvitteellinen esimerkki kilpailijaseurannasta: etusivujen kampanjat ja hintavertailu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="updated-banner">Päivitetty <time datetime="2026-11-26T07:20+02:00">torstaina 26.11.2026 klo 7.20</time> (Suomen aikaa)</p>
+  <h1>Kilpailijoiden etusivut ja hinnat</h1>
+  <p class="lede">Kolme kuvitteellista kalastusvälineiden verkkokauppaa: Kilpailija A, B ja C. Etusivujen havainnekuvat, kampanjat ja hintavertailu etusivuilla nostetuista tuotteista.</p>
+  <p class="meta">Sivusto on esimerkki siitä, miltä kilpailijaseuranta voisi näyttää. Kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <section id="yhteenveto">
+    <h2>Yhteenveto</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Kampanjat</span>
+        <h3>Kaikilla Black-kampanja, rytmi eroaa</h3>
+        <p>Kilpailija A pitää kampanjaa koko marraskuun eikä näytä prosentteja etusivulla. Kilpailija B ajaa viikon kampanjaa 23.–30.11. Kilpailija C on aggressiivisin: Black Week, päivän tarjous ja lähtölaskurit joka tuotekortissa.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Hinnat</span>
+        <h3>Kilpailija A on kallein uudessa anturissa</h3>
+        <p>Kilpailija A:n etusivun pääuutuus, reaaliaikaluotaimen anturi S4, on 200–300 € kalliimpi kuin Kilpailija B:llä (S4 +11,8 %, S4 HD +16,8 %). Kilpailija C on näiden välissä.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Hinnat</span>
+        <h3>Kilpailija C halvin perustuotteissa</h3>
+        <p>Kilpailija C oli halvin 5:ssä 8:sta vertaillusta tuotteesta. Jigi 14 cm maksaa päivän tarjouksena 12,90 € (A 18,90 €, B 19,90 €).</p>
+      </div>
+      <div class="card">
+        <span class="tag">Valikoima</span>
+        <h3>Etusivuilla ei samoja tuotteita</h3>
+        <p>Kolmen etusivun tuotteissa ei ollut yhtään täsmälleen samaa tuotetta. Siksi kunkin etusivun tuotteet haettiin myös kahdesta muusta kaupasta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="osiot">
+    <h2>Osiot</h2>
+    <div class="sections">
+      <a class="seccard" href="hypoteesi.html"><b>Hypoteesi</b><span>Viisi testattavaa hypoteesia seurannan hyödyistä ja niiden mittarit.</span><i>Avaa →</i></a>
+      <a class="seccard" href="kehitysideat.html"><b>Kehitysideat</b><span>Myyntidata, poistuvat tuotteet ja sähköpostiseuranta sekä kaavio siitä, mitä toteutus vaatii.</span><i>Avaa →</i></a>
+      <a class="seccard" href="kilpailijat.html"><b>Kilpailijat</b><span>Kilpailija A, B ja C: etusivujen havainnekuvat ja kampanja-analyysi.</span><i>Avaa →</i></a>
+      <a class="seccard" href="hintavertailu.html"><b>Hintavertailu</b><span>8 tuotteen hinnat kolmessa kaupassa, tuotekuvat ja hintahistoria.</span><i>Avaa →</i></a>
+      <a class="seccard" href="kampanja-arkisto.html"><b>Kampanja-arkisto</b><span>Kilpailijoiden ja omat kampanjat kalenterissa ja listana.</span><i>Avaa →</i></a>
+      <a class="seccard" href="menetelma.html"><b>Menetelmä</b><span>Miten tiedot kerättäisiin ja mitkä ovat vertailun rajoitukset.</span><i>Avaa →</i></a>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="next" href="hypoteesi.html"><small>Seuraava →</small><b>Hypoteesi</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+</body>
+</html>

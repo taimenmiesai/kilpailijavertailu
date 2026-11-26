@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypoteesi · Kilpailijavertailu</title>
+<meta name="description" content="Mitä hyötyä kilpailijaseurannasta on: testattavat hypoteesit ja mittarit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html" class="active" aria-current="page">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Hypoteesi</p>
+  <section id="hypoteesi">
+    <h1>Hypoteesi: mitä hyötyä seurannasta on</h1>
+    <p class="lede">Säännöllinen kilpailijaseuranta parantaa hinnoittelu- ja kampanjapäätöksiä niin, että myynti ja kate kasvavat. Alla hyöty on pilkottu viideksi testattavaksi hypoteesiksi. Jokaiselle on mittari, jolla sen voi todentaa tai hylätä.</p>
+    <div class="hyps">
+      <div class="hyp">
+        <span class="num">H1 · Hinnoittelu</span>
+        <h3>Kun hinta korjataan kilpailukykyiseksi tuotteissa, joissa olemme yli 5 % halvinta kalliimpia, niiden myynti (kpl) kasvaa vähintään 10 % neljässä viikossa.</h3>
+        <p class="note">Jos tiedämme kilpailijoiden hinnat myydyimmissä tuotteissa, voimme korjata ylihinnoitellut tuotteet ennen kuin myynti laskee.</p>
+        <div class="metric"><b>Mittari:</b> Myynti kpl ja konversio korjatuissa tuotteissa ennen ja jälkeen, verrattuna korjaamattomiin.</div>
+      </div>
+      <div class="hyp">
+        <span class="num">H2 · Katteen suojaaminen</span>
+        <h3>Kun hintaa nostetaan 3–5 % tuotteissa, joissa olemme halvimpia tai ainoita myyjiä, myynti ei laske merkittävästi ja kate kasvaa.</h3>
+        <p class="note">Kaikkea ei tarvitse myydä halvimmalla. Seuranta näyttää, missä olemme jo halvimpia tai kilpailijalla ei ole tuotetta.</p>
+        <div class="metric"><b>Mittari:</b> Kate-% ja kateeuroa per tuote, myynnin muutos kpl.</div>
+      </div>
+      <div class="hyp">
+        <span class="num">H3 · Kampanjoiden ajoitus</span>
+        <h3>Kun oma kampanja ajoitetaan alkamaan ennen kilpailijoiden kampanjaa tai niiden väliin, kampanjan myynti on suurempi kuin samassa kohdassa alkavalla kampanjalla.</h3>
+        <p class="note">Kampanja-arkistosta näkee kilpailijoiden rytmin: esim. Kilpailija A:n kampanja koko marraskuun, B:n Black Friday 23.–30.11. ja C:n Black Week.</p>
+        <div class="metric"><b>Mittari:</b> Kampanjan myynti ja kävijät per päivä verrattuna edellisvuoteen ja kilpailijoiden kampanjapäiviin.</div>
+      </div>
+      <div class="hyp">
+        <span class="num">H4 · Poistuvien kävijöiden pitäminen</span>
+        <h3>Tuotesivuilla, joilla poistuminen on korkea ja kilpailija selvästi halvempi, hinnan korjaus tai hintatakuun näyttäminen laskee poistumisprosenttia.</h3>
+        <p class="note">Korkea poistumisprosentti tuotesivulla voi johtua siitä, että kävijä löytää saman tuotteen halvemmalla muualta.</p>
+        <div class="metric"><b>Mittari:</b> Tuotesivun poistumisprosentti ja konversio ennen ja jälkeen (GA4).</div>
+      </div>
+      <div class="hyp">
+        <span class="num">H5 · Reagointi sähköpostikampanjoihin</span>
+        <h3>Kun reagoimme kilpailijan sähköpostikampanjaan 24 tunnin sisällä omalla viestillä tai hinnalla, menetämme vähemmän myyntiä kampanjan kohdetuotteissa kuin ilman reagointia.</h3>
+        <p class="note">Kun kilpailijan uutiskirje lähtee, osa asiakkaista vertailee hintoja saman päivän aikana.</p>
+        <div class="metric"><b>Mittari:</b> Kohdetuotteiden myynti kampanjaviikolla verrattuna edellisiin viikkoihin, oman viestin avaus- ja klikkausprosentti.</div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="index.html"><small>← Edellinen</small><b>Yhteenveto</b></a>
+    <a class="next" href="kehitysideat.html"><small>Seuraava →</small><b>Kehitysideat</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kampanja-arkisto · Kilpailijavertailu</title>
+<meta name="description" content="Kilpailijoiden ja omien kampanjoiden arkisto kalenterina ja listana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html" class="active" aria-current="page">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Kampanja-arkisto</p>
+  <section id="arkisto">
+    <h1>Kampanja-arkisto</h1>
+    <p class="lede">Kilpailijoiden ja omat kampanjat kalenterina tai listana. Valitse aikaväli, vertaa jaksoja ja suodata kilpailijoita. Kampanjan tiedot aukeavat klikkaamalla.</p>
+    <div class="demo-note"><b>Huom.:</b> Arkisto on havainnollistus. Kaikki kampanjat ovat keksittyjä. <i>Havainto 26.11.</i> -kampanjat (kalenterissa yhtenäinen viiva) kuvaavat etusivuilta tehtyjä havaintoja. <i>Esimerkki</i>-kampanjat (raidallinen viiva) kuvaavat tietoja, joita ei vielä seurata: kilpailijoiden sähköpostit, omat kampanjat ja vuoden 2025 kampanjat.</div>
+    <div class="viewtabs" role="group" aria-label="Näkymä">
+      <button type="button" id="v-cal" aria-pressed="true">Kalenteri</button>
+      <button type="button" id="v-list" aria-pressed="false">Lista</button>
+    </div>
+    <div id="arch-cal">
+      <div class="calctl">
+        <fieldset>
+          <legend>Näytä</legend>
+          <label><input type="checkbox" data-who="oma" checked><span class="swatch" style="background:var(--oma)"></span>Omat</label>
+          <label><input type="checkbox" data-who="a" checked><span class="swatch" style="background:var(--ka)"></span>Kilpailija A</label>
+          <label><input type="checkbox" data-who="b" checked><span class="swatch" style="background:var(--kb)"></span>Kilpailija B</label>
+          <label><input type="checkbox" data-who="c" checked><span class="swatch" style="background:var(--kc)"></span>Kilpailija C</label>
+        </fieldset>
+        <fieldset>
+          <legend>Aikaväli</legend>
+          <select id="c-preset" aria-label="Valmis aikaväli">
+            <option value="2026-11-01|2026-12-31">Marras–joulukuu 2026</option>
+            <option value="2026-11-16|2026-12-07">Black Friday -kausi 2026</option>
+            <option value="2026-09-01|2026-12-31">Syys–joulukuu 2026</option>
+            <option value="custom">Oma valinta</option>
+          </select>
+          <label>Alku <input type="date" id="c-from" value="2026-11-01"></label>
+          <label>Loppu <input type="date" id="c-to" value="2026-12-31"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Vertailu</legend>
+          <label><input type="checkbox" id="c-cmp">Vertaa edelliseen vuoteen</label>
+        </fieldset>
+      </div>
+      <div class="cal-legend">
+        <span><i class="lg-real"></i>Etusivuhavainto</span>
+        <span><i class="lg-demo"></i>Esimerkki</span>
+        <span><i class="cal-today" style="position:static;display:inline-block;height:12px"></i>Tänään 26.11.</span>
+        <span>Pyöreä viiva = sähköposti</span>
+      </div>
+      <div id="c-cals"></div>
+      <div id="c-detail" class="caldetail" hidden></div>
+      <div id="c-cmpwrap" hidden>
+        <h3>Vertailu: kampanjapäivät valitulla aikavälillä</h3>
+        <div class="table-wrap"><table class="cmp" id="c-cmptable"></table></div>
+      </div>
+    </div>
+    <div id="arch-list" hidden>
+    <p class="note">Avaa rivi klikkaamalla.</p>
+    <div class="archive">
+      <details>
+        <summary><span class="date">26.11.2026</span><span class="who"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</span><span class="theme">Black Week – päivän tarjous</span><span class="badges"><span class="badge">Etusivu</span><span class="badge real">Havainto 26.11.</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Otsikko</dt><dd>”Black Week” + ”Päivän tarjous”</dd><dt>Kesto</dt><dd>Black Week, tuotekorteissa lähtölaskuri (4 päivää jäljellä)</dd><dt>Alennus</dt><dd>Kategoriat −15…−30 %, päivän tarjous Jigi 14 cm 12,90 € (A 18,90 €, B 19,90 €)</dd><dt>Tuotteet</dt><dd>Vieheet, vavat, kelat, vaatteet ja elektroniikan joulutarjoukset (Karttaplotteri 9″ 869 €)</dd><dt>Keinot</dt><dd>Päivittäin vaihtuva tarjous, lähtölaskurit, yliviivatut ennen-hinnat, Supertarjoukset-valikko</dd><dt>Lähde</dt><dd><a href="kilpailija-c.html">Etusivun havainnekuva</a></dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">26.11.2026</span><span class="who"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</span><span class="theme">Black Friday 2026</span><span class="badges"><span class="badge">Etusivu</span><span class="badge real">Havainto 26.11.</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Otsikko</dt><dd>”Black Friday 23.–30.11.”</dd><dt>Kesto</dt><dd>23.–30.11.2026 (8 päivää)</dd><dt>Alennus</dt><dd>ALE −10…−40 %, 380 tuotetta tarjouksessa</dd><dt>Tuotteet</dt><dd>Painopiste vaatteissa, esim. untuvatakki 399 € (ennen 529 €)</dd><dt>Keinot</dt><dd>Hero-karuselli, kampanjamerkki tuotekuvissa, ilmainen toimitus yli 90 €</dd><dt>Lähde</dt><dd><a href="kilpailija-b.html">Etusivun havainnekuva</a></dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">26.11.2026</span><span class="who"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</span><span class="theme">Musta marraskuu</span><span class="badges"><span class="badge">Etusivu</span><span class="badge real">Havainto 26.11.</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Otsikko</dt><dd>”Satoja tuotteita edullisemmin koko marraskuun”</dd><dt>Kesto</dt><dd>Koko marraskuu</dd><dt>Alennus</dt><dd>Ei prosentteja etusivulla</dd><dt>Tuotteet</dt><dd>Neljä kategoriaa: kalastus, veneily, perhokalastus, retkeily</dd><dt>Keinot</dt><dd>Niukkuus (”rajattu erä”), 30 päivän hintatakuu</dd><dt>Lähde</dt><dd><a href="kilpailija-a.html">Etusivun havainnekuva</a></dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">26.11.2026</span><span class="who"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</span><span class="theme">Anturi S4 – ennakkovaraus</span><span class="badges"><span class="badge">Etusivu</span><span class="badge real">Havainto 26.11.</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Otsikko</dt><dd>”Uusi anturi S4 nyt ennakkovarattavissa”</dd><dt>Kesto</dt><dd>Toistaiseksi</dd><dt>Alennus</dt><dd>Ei alennusta: S4 1 890 €, S4 HD 2 090 €</dd><dt>Huomio</dt><dd>Kilpailija B:llä samat anturit 200–300 € halvemmalla</dd><dt>Lähde</dt><dd><a href="hintavertailu.html">Hintavertailu</a></dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">24.11.2026</span><span class="who"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</span><span class="theme">Black Week alkaa</span><span class="badges"><span class="badge">Sähköposti</span><span class="badge demo">Esimerkki</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Aiherivi</dt><dd>”Black Week on täällä – jopa −30 %”</dd><dt>Lähetetty</dt><dd>ma 24.11.2026 klo 8.00</dd><dt>Kesto</dt><dd>24.11.–1.12.2026</dd><dt>Alennus</dt><dd>−15…−30 %, osa tuotteista rajattu pois</dd><dt>Tuotteet</dt><dd>Omien merkkien vavat, vieheet ja laukut</dd><dt>CTA</dt><dd>”Katso kaikki tarjoukset”</dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">20.11.2026</span><span class="who"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</span><span class="theme">Ennakko kanta-asiakkaille</span><span class="badges"><span class="badge">Sähköposti</span><span class="badge demo">Esimerkki</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Aiherivi</dt><dd>”Kanta-asiakkaana pääset ostoksille ennen muita”</dd><dt>Lähetetty</dt><dd>to 20.11.2026 klo 16.00</dd><dt>Kesto</dt><dd>20.–23.11.2026</dd><dt>Alennus</dt><dd>Kanta-asiakashinnat valikoiduista tuotteista</dd><dt>Tuotteet</dt><dd>Luotaimet, oman merkin vavat, retkeilyvaatteet</dd><dt>CTA</dt><dd>”Kirjaudu ja katso hintasi”</dd></dl>
+      </details>
+      <details>
+        <summary><span class="date">14.11.2026</span><span class="who"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</span><span class="theme">Joululahjaopas kalastajalle</span><span class="badges"><span class="badge">Sähköposti</span><span class="badge demo">Esimerkki</span><span class="chev" aria-hidden="true">›</span></span></summary>
+        <dl><dt>Aiherivi</dt><dd>”Lahjaideoita kalastajalle alle 50 €”</dd><dt>Lähetetty</dt><dd>pe 14.11.2026 klo 10.00</dd><dt>Kesto</dt><dd>Jouluun asti</dd><dt>Alennus</dt><dd>Ei alennusta, ilmainen toimitus yli 90 €</dd><dt>Tuotteet</dt><dd>Vaappu 12 cm, monitoimityökalu, perhonsidontasetti</dd><dt>CTA</dt><dd>”Katso lahjaideat”</dd></dl>
+      </details>
+    </div>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="hintavertailu.html"><small>← Edellinen</small><b>Hintavertailu</b></a>
+    <a class="next" href="menetelma.html"><small>Seuraava →</small><b>Menetelmä</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+<script src="assets/kalenteri.js"></script>
+</body>
+</html>

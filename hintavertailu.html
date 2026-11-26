@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hintavertailu · Kilpailijavertailu</title>
+<meta name="description" content="Hintavertailu: etusivuilla nostettujen tuotteiden hinnat kolmessa kuvitteellisessa kaupassa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html" class="active" aria-current="page">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Hintavertailu</p>
+  <section id="hinnat">
+    <h1>Hintavertailu</h1>
+    <p class="lede">Etusivuilla nostetut tuotteet, jotka löytyivät vähintään kahdesta kaupasta. <span class="home" style="display:inline">ETUSIVULLA</span> = tuote oli kyseisen kaupan etusivulla. Vihreä on halvin. Erotus on laskettu halvimpaan. Avaa hintahistoria tuotteen nimen alta. <b>Tuotteet, hinnat ja hintahistoria ovat keksittyjä.</b></p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tuote</th><th class="num">Kilpailija A</th><th class="num">Kilpailija B</th><th class="num">Kilpailija C</th><th>Huom.</th></tr>
+        </thead>
+        <tbody>
+          <tr data-pid="anturi-s4">
+            <td><div class="prod"><img src="kuvat/tuotteet/anturi-s4.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Reaaliaikaluotaimen anturi S4</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num worst"><span class="home">ETUSIVULLA</span>1 890,00 €<span class="diff">+200 € / +11,8 %</span></td>
+            <td class="num best">1 690,00 €</td>
+            <td class="num">1 749,00 €<span class="diff">+59 € / +3,5 %</span></td>
+            <td class="note">Kilpailija A:lla ennakkovaraus</td>
+          </tr>
+          <tr data-pid="anturi-s4hd">
+            <td><div class="prod"><img src="kuvat/tuotteet/anturi-s4hd.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Reaaliaikaluotaimen anturi S4 HD</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num worst"><span class="home">ETUSIVULLA</span>2 090,00 €<span class="diff">+300 € / +16,8 %</span></td>
+            <td class="num best">1 790,00 €</td>
+            <td class="num">1 890,00 €<span class="diff">+100 € / +5,6 %</span></td>
+            <td class="note">Kilpailija A:lla ennakkovaraus</td>
+          </tr>
+          <tr data-pid="plotteri-9">
+            <td><div class="prod"><img src="kuvat/tuotteet/plotteri-9.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Karttaplotteri 9″ + anturi</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num">899,00 €<span class="diff">+30 € / +3,5 %</span></td>
+            <td class="num worst">1 149,00 €<span class="diff">+280 € / +32,2 %</span></td>
+            <td class="num best"><span class="home">ETUSIVULLA</span>869,00 €</td>
+            <td class="note">Kilpailija B:n ennen-hinta 1 349 €</td>
+          </tr>
+          <tr data-pid="luotain-7">
+            <td><div class="prod"><img src="kuvat/tuotteet/luotain-7.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Kaikuluotain 7″</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num">389,00 €<span class="diff">+10 € / +2,6 %</span></td>
+            <td class="num worst">419,00 €<span class="diff">+40 € / +10,6 %</span></td>
+            <td class="num best"><span class="home">ETUSIVULLA</span>379,00 €</td>
+            <td class="note">Kilpailija B:llä tilapäisesti loppu</td>
+          </tr>
+          <tr data-pid="avokela-3000">
+            <td><div class="prod"><img src="kuvat/tuotteet/avokela-3000.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Avokela 3000</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num"><span class="home">ETUSIVULLA</span>89,90 €<span class="diff">+5 € / +5,9 %</span></td>
+            <td class="num worst">99,00 €<span class="diff">+14,10 € / +16,6 %</span></td>
+            <td class="num best">84,90 €</td>
+            <td class="note">Hinta riippuu koosta, C:n hinta ”alkaen”</td>
+          </tr>
+          <tr data-pid="jigi-14">
+            <td><div class="prod"><img src="kuvat/tuotteet/jigi-14.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Jigi 14 cm 110 g</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num">18,90 €<span class="diff">+6 € / +46,5 %</span></td>
+            <td class="num worst">19,90 €<span class="diff">+7 € / +54,3 %</span></td>
+            <td class="num best"><span class="home">ETUSIVULLA</span>12,90 €</td>
+            <td class="note">Kilpailija C:llä päivän tarjous</td>
+          </tr>
+          <tr data-pid="vaappu-12">
+            <td><div class="prod"><img src="kuvat/tuotteet/vaappu-12.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Vaappu 12 cm</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num worst">17,90 €<span class="diff">+0,40 € / +2,3 %</span></td>
+            <td class="num best"><span class="home">ETUSIVULLA</span>17,50 €</td>
+            <td class="num na">ei valikoimassa</td>
+            <td class="note">Juhlavuoden erikoisväri</td>
+          </tr>
+          <tr data-pid="perhokela-5">
+            <td><div class="prod"><img src="kuvat/tuotteet/perhokela-5.svg" alt="" width="56" height="56" loading="lazy"><div><span class="pname">Perhokela #5/6</span><button type="button" class="histbtn" aria-expanded="false">Hintahistoria <span aria-hidden="true">▸</span></button></div></div></td>
+            <td class="num worst"><span class="home">ETUSIVULLA</span>329,00 €<span class="diff">+50 € / +17,9 %</span></td>
+            <td class="num na">ei valikoimassa</td>
+            <td class="num best">279,00 €</td>
+            <td class="note">Kilpailija C:n hinta ”alkaen”</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Halvin kauppa per tuote</h3>
+    <div class="cards">
+      <div class="card"><span class="dot" style="background:var(--kc)"></span><b>Kilpailija C</b><div class="kpi">5 / 8</div><p class="note">Karttaplotteri 9″ + anturi, Kaikuluotain 7″, Avokela 3000, Jigi 14 cm 110 g, Perhokela #5/6</p></div>
+      <div class="card"><span class="dot" style="background:var(--kb)"></span><b>Kilpailija B</b><div class="kpi">3 / 8</div><p class="note">Reaaliaikaluotaimen anturi S4, Reaaliaikaluotaimen anturi S4 HD, Vaappu 12 cm</p></div>
+      <div class="card"><span class="dot" style="background:var(--ka)"></span><b>Kilpailija A</b><div class="kpi">0 / 8</div><p class="note">Lähellä halvinta kaikuluotaimessa (+2,6 %) ja karttaplotterissa (+3,5 %)</p></div>
+    </div>
+    <h3>Lisähavaintoja hinnoista</h3>
+    <ul class="points">
+      <li><b>Edellisen sukupolven anturi S3:</b> Kilpailija B 1 190 € (ALE −30 %, ennen 1 699 €), Kilpailija A 1 290 €, Kilpailija C 1 390 €. Vanhaa mallia tyhjennetään alennuksella samalla kun S4 tulee myyntiin.</li>
+      <li><b>Kalanmallinen jigi 25 cm:</b> Kilpailija C:llä erikoisväri alk. 9,90 € (ennen 19,90 €), Kilpailija A:lla vakioväri 17,90 €. Värit eroavat, joten hintoja ei voi verrata suoraan.</li>
+      <li><b>Karttaplotteri 10″</b> (Kilpailija A:n etusivulla 1 390 €): Kilpailija C:llä on vain edellinen malli (loppuunmyyty), eikä Kilpailija B:n hintaa voitu varmistaa.</li>
+    </ul>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="kilpailija-c.html"><small>← Edellinen</small><b>Kilpailija C</b></a>
+    <a class="next" href="kampanja-arkisto.html"><small>Seuraava →</small><b>Kampanja-arkisto</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+<script src="assets/hintahistoria.js"></script>
+</body>
+</html>

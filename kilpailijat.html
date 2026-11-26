@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kilpailijat · Kilpailijavertailu</title>
+<meta name="description" content="Seurattavat kuvitteelliset kilpailijat A, B ja C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle active" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html" class="active" aria-current="page">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Kilpailijat</p>
+  <section id="kilpailijat">
+    <h1>Kilpailijat</h1>
+    <p class="lede">Seurannassa on kolme kuvitteellista kalastusvälineiden verkkokauppaa. Jokaisen kohdalla on etusivun havainnekuvat ja kampanja-analyysi.</p>
+    <div class="complist">
+      <div class="compcard" style="--c:var(--ka)">
+        <h3><span class="dot" style="background:var(--ka)"></span>Kilpailija A</h3>
+        <p class="note">Valtakunnallinen kalastus- ja eräliike: 5 myymälää ja noin 40 000 tuotetta.</p>
+        <p><b>Kampanja:</b> Musta marraskuu koko kuun ilman prosentteja. Anturi S4 on kilpailijoita 140–300 € kalliimpi.</p>
+        <div class="links"><a href="kilpailija-a.html">Katso analyysi</a></div>
+      </div>
+      <div class="compcard" style="--c:var(--kb)">
+        <h3><span class="dot" style="background:var(--kb)"></span>Kilpailija B</h3>
+        <p class="note">Alueellinen erä- ja kalastusliike: verkkokauppa ja yksi myymälä.</p>
+        <p><b>Kampanja:</b> Black Friday 23.–30.11., alennukset painottuvat vaatteisiin. Halvin reaaliaikaluotaimen antureissa.</p>
+        <div class="links"><a href="kilpailija-b.html">Katso analyysi</a></div>
+      </div>
+      <div class="compcard" style="--c:var(--kc)">
+        <h3><span class="dot" style="background:var(--kc)"></span>Kilpailija C</h3>
+        <p class="note">Pohjoismainen verkkokauppa, jolla on suomenkielinen kauppa. Noin 35 000 tuotetta ja asiakasarvio 4,6/5.</p>
+        <p><b>Kampanja:</b> Black Week, päivän tarjous ja lähtölaskurit. Halvin 5 tuotteessa 8:sta.</p>
+        <div class="links"><a href="kilpailija-c.html">Katso analyysi</a></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="kehitysideat.html"><small>← Edellinen</small><b>Kehitysideat</b></a>
+    <a class="next" href="kilpailija-a.html"><small>Seuraava →</small><b>Kilpailija A</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+</body>
+</html>

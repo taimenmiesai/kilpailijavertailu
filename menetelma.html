@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menetelmä · Kilpailijavertailu</title>
+<meta name="description" content="Miten tiedot kerättiin ja vertailun rajoitukset.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html" class="active" aria-current="page">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Menetelmä</p>
+  <section id="menetelma">
+    <h1>Menetelmä ja rajoitukset</h1>
+    <p class="lede">Tämän sivuston kaupat, tuotteet, hinnat, kampanjat ja kuvat ovat keksittyjä. Alla kuvataan, miten tiedot kerättäisiin oikeassa seurannassa.</p>
+    <ul class="points">
+      <li>Etusivut avataan selaimella suomalaisena kävijänä (toimitusmaa FI). Evästeistä hyväksytään vain välttämättömät.</li>
+      <li>Kuvakaappaukset otetaan työpöytänäkymästä. Hero-karusellit vaihtuvat, joten kuvassa näkyy vain yksi nosto.</li>
+      <li>Muiden kauppojen hinnat haetaan kauppojen omalla tuotehaulla. Vertailuun otetaan vain tuotteet, joiden malli täsmää. Asiakaskohtaisia hintoja tai kanta-asiakashintoja ei huomioida.</li>
+      <li>Toimituskulut eivät sisälly hintoihin.</li>
+      <li>Kampanjahinnat muuttuvat nopeasti Black Week -aikana, erityisesti päivän tarjoukset.</li>
+      <li>Havainnekuvat on piirretty tätä esimerkkiä varten, eivätkä ne esitä oikeita verkkokauppoja.</li>
+    </ul>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="kampanja-arkisto.html"><small>← Edellinen</small><b>Kampanja-arkisto</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kehitysideat · Kilpailijavertailu</title>
+<meta name="description" content="Kehitysideat kilpailijaseurannalle ja mitä niiden toteutus vaatisi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brandlink" href="index.html"><strong>Kilpailijavertailu</strong></a>
+    <span class="updated">Päivitetty <time datetime="2026-11-26T07:20+02:00">26.11.2026 klo 7.20</time></span>
+    <button type="button" class="navtoggle" aria-expanded="false" aria-controls="navlist"><span aria-hidden="true">☰</span> Valikko</button>
+    <nav class="mainnav" aria-label="Päävalikko">
+      <ul id="navlist">
+        <li><a href="hypoteesi.html">Hypoteesi</a></li>
+        <li><a href="kehitysideat.html" class="active" aria-current="page">Kehitysideat</a></li>
+        <li><a href="index.html">Yhteenveto</a></li>
+        <li class="has-sub">
+          <button type="button" class="subtoggle" aria-expanded="false" aria-controls="sub-kilp">Kilpailijat <span aria-hidden="true">▾</span></button>
+          <ul class="sub" id="sub-kilp">
+            <li><a href="kilpailijat.html">Kaikki kilpailijat</a></li>
+            <li><a href="kilpailija-a.html"><span class="dot" style="background:var(--ka)"></span>Kilpailija A</a></li>
+            <li><a href="kilpailija-b.html"><span class="dot" style="background:var(--kb)"></span>Kilpailija B</a></li>
+            <li><a href="kilpailija-c.html"><span class="dot" style="background:var(--kc)"></span>Kilpailija C</a></li>
+          </ul>
+        </li>
+        <li><a href="hintavertailu.html">Hintavertailu</a></li>
+        <li><a href="kampanja-arkisto.html">Kampanja-arkisto</a></li>
+        <li><a href="menetelma.html">Menetelmä</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <p class="fiction-note">Esimerkkisivusto: kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä.</p>
+  <p class="crumbs"><a href="index.html">Etusivu</a> › Kehitysideat</p>
+  <section id="kehitysideat">
+    <h1>Kehitysideat</h1>
+    <p class="lede">Nykyinen vertailu perustuu kilpailijoiden etusivuihin. Seuraavaksi vertailu kannattaa kohdistaa omiin tuotteisiin, joilla on eniten merkitystä myynnille.</p>
+    <div class="ideas">
+      <div class="idea">
+        <h3>1. Myydyimmät tuotteet ja kilpailijahinnat</h3>
+        <p>Myynti- ja analytiikkadatasta poimitaan parhaiten myyvät tuotteet, ja niille haetaan kilpailijoiden hinnat. Näin näkee, onko hinta kilpailukykyinen juuri niissä tuotteissa, joista myynti syntyy.</p>
+      </div>
+      <div class="idea">
+        <h3>2. Korkea poistumisprosentti ja hinta</h3>
+        <p>Analytiikasta haetaan tuotesivut, joilla poistumisprosentti on korkea mutta ostoja vähän, ja niiden hintaa verrataan kilpailijoihin. Jos kilpailija on selvästi halvempi, hinta on todennäköinen syy poistumiseen.</p>
+      </div>
+      <div class="idea">
+        <h3>3. Sähköpostimarkkinoinnin seuranta ja kampanja-arkisto</h3>
+        <p>Kilpailijoiden uutiskirjeet tilataan omaan seurantaosoitteeseen, ja jokainen viesti sekä etusivun kampanja tallennetaan arkistoon: päivämäärä, teema, aiherivi, alennus, kesto ja nostetut tuotteet. Arkistosta näkee kilpailijoiden kampanjarytmin ja voi ennakoida seuraavan vuoden kampanjat.</p>
+      </div>
+    </div>
+
+    <h3>Mitä tämä vaatisi</h3>
+    <div class="flow" role="img" aria-label="Kaavio: myynti- ja analytiikkadata valitsee seurattavat tuotteet, tuotteet yhdistetään kilpailijoiden tuotteisiin EAN-koodilla, kilpailijahinnat kerätään ajastetusti, ja tuloksena syntyy hintavertailu ja hälytykset.">
+      <div class="stage">
+        <div class="lbl">1. Omat datalähteet</div>
+        <div class="node"><b>Myyntidata</b><span>verkkokauppa-alusta / kassajärjestelmä: myynti kpl ja € per tuote</span></div>
+        <div class="node"><b>Verkkoanalytiikka</b><span>esim. GA4: tuotesivujen näytöt, poistumisprosentti ja konversio</span></div>
+        <div class="node"><b>Tuoterekisteri</b><span>tuotenimi, EAN/GTIN, oma hinta ja kate</span></div>
+      </div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="stage">
+        <div class="lbl">2. Seurattavat tuotteet</div>
+        <div class="node"><b>Top-myyjät</b><span>esim. 50 eniten myyvää viimeisen 30 pv aikana</span></div>
+        <div class="node"><b>Korkea poistuma</b><span>tuotesivut, joilla on paljon näyttöjä, korkea poistuma ja vähän ostoja</span></div>
+        <div class="node"><b>Tuotteiden yhdistäminen</b><span>EAN ensisijaisesti, muuten merkki + malli + koko</span></div>
+      </div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="stage">
+        <div class="lbl">3. Kilpailijahinnat</div>
+        <div class="node"><b>Kilpailija A</b><span>tuotehaku / tuotesivu</span></div>
+        <div class="node"><b>Kilpailija B</b><span>tuotehaku / tuotesivu</span></div>
+        <div class="node"><b>Kilpailija C</b><span>tuotehaku / tuotesivu</span></div>
+        <div class="node"><span>Ajastettu keruu selaimella kerran päivässä, hintahistoria talteen</span></div>
+      </div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="stage">
+        <div class="lbl">4. Tulos</div>
+        <div class="node out"><b>Hintavertailu</b><span>oma hinta vs. halvin kilpailija, ero € ja %</span></div>
+        <div class="node out"><b>Hälytykset</b><span>esim. kilpailija yli 5 % halvempi top-myyjässä</span></div>
+        <div class="node out"><b>Raportti tälle sivulle</b><span>päivittyy automaattisesti</span></div>
+      </div>
+    </div>
+    <h3>Edellytykset</h3>
+    <ul class="needs">
+      <li><b>Pääsy myyntidataan:</b> raportti tai API verkkokauppa-alustalta.</li>
+      <li><b>Pääsy analytiikkaan:</b> GA4-lukuoikeus tai säännöllinen raporttivienti.</li>
+      <li><b>EAN-koodit omista tuotteista,</b> jotta tuotteet yhdistyvät luotettavasti.</li>
+      <li><b>Ajastettu hintojen keruu:</b> kilpailijoiden sivut renderöidään selaimessa, joten keruu tarvitsee selainautomaation.</li>
+      <li><b>Tallennus:</b> esim. Google Sheets tai pieni tietokanta hintahistoriaa varten.</li>
+      <li><b>Sähköpostiseuranta:</b> oma seurantaosoite, jolla tilataan kilpailijoiden uutiskirjeet, ja viestien automaattinen poiminta arkistoon.</li>
+      <li><b>Raportointi:</b> tämä sivu päivittyy datasta, ja hälytykset lähtevät sähköpostiin.</li>
+    </ul>
+    <p><a class="morelink" href="kampanja-arkisto.html">Katso esimerkki kampanja-arkistosta →</a></p>
+  </section>
+
+  <nav class="pager" aria-label="Sivut">
+    <a class="prev" href="hypoteesi.html"><small>← Edellinen</small><b>Hypoteesi</b></a>
+    <a class="next" href="kilpailijat.html"><small>Seuraava →</small><b>Kilpailijat</b></a>
+  </nav>
+
+  <footer>Koottu 26.11.2026. Kaikki kaupat, tuotteet, hinnat ja kampanjat ovat keksittyjä esimerkkejä.</footer>
+</main>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="assets/site.js"></script>
+</body>
+</html>
