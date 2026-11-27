@@ -18,6 +18,7 @@ Esimerkki kilpailijaseurannasta. Kaikki kaupat (Kilpailija A, B ja C), tuotteet,
 | `hintavertailu.html` | Hintavertailu ja hintahistoria |
 | `kampanja-arkisto.html` | Kampanja-arkisto: kalenteri ja lista |
 | `menetelma.html` | Menetelmä ja rajoitukset |
+| `projektit.html` | Linkit muihin projekteihin |
 
 Yhteiset tiedostot: `assets/style.css` (tyylit), `assets/site.js` (valikko, kuvien suurennus), `assets/kalenteri.js` ja `assets/hintahistoria.js`.
 
